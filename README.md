@@ -1,7 +1,10 @@
 # AI2615 Design and Analysis of Algorithms
-**Updates**
+## Updates
 
-- Mar.07 Uploaded Programming Assignment 1
-  + 1015: Multiplication
-  + 4071: Fibonacci
-  + 4367: Extended Euclid's Algorithm
+**Mar.07 Uploaded Programming Assignment 1**
+- 1015: Multiplication
+- 4071: Fibonacci
+- 4367: Extended Euclid's Algorithm
+
+**Mar.21 Updated Assignment 2**
+- 4372: Quick Select
