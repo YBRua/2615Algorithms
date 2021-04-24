@@ -1,6 +1,11 @@
 # AI2615 Design and Analysis of Algorithms
 ## Updates
 
+**Apr.24 Assignment 4**
+- 4385: [Edit Distance](./Assignment4/4385_EditDistance/editDistance.cpp)
+- 4386: [0-1Knapsack](./Assignment4/4386_Knapsack/knapsack.cpp)
+- 4387: [Longest Increasing Subsequence](./Assignment4/4387_LongestIncreasingSeq/LongestIncrSeq.cpp) (BUGGY)
+
 **Apr.07 Finished Assignment 3**
 - 4381: [Negative Cycle (Bellman-Ford)](./Assignment3/4381_NegativeCycle/BellmanFord.cpp)
 - 4382: [Shortest Path (Dijkstra)](./Assignment3/4382_ShortestPath/ShortestPath.cpp)
