@@ -48,7 +48,7 @@ int main()
         {
             if (length[j] == maxLength)
             {
-                if (minValue > arr[j])
+                if (minValue >= arr[j])
                 {
                     minValue = arr[j];
                     argmax = j;
