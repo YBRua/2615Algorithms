@@ -1,5 +1,7 @@
 # AI2615 Design and Analysis of Algorithms
 ## Updates
+**Apr.29 Assignment 4**
+- 4384: [Bracket Matching DP](./Assignment4/4384_BracketMatching/bracketMatching.cpp) DP is difficult :(.
 
 **Apr.25 Assignment 4 bug fixes**
 - Bug fix of 4387, it has passed all the test cases and is therefore no longer considered buggy.
