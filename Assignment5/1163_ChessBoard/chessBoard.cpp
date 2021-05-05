@@ -42,13 +42,6 @@ void initializeConflictTables(int n, int msk, int totalStates)
                 secondRowConflictTable[state] = mask(msk, secondRowConflicts[idx] | secondRowConflictTable[state]);
             }
         }
-        /* for debugging purposes
-        cout << "State: " << state << endl;
-        cout << "Conflicts: " << endl;
-        cout << "  - " << firstRowConflictTable[state] << endl;
-        cout << "  - " << secondRowConflictTable[state] << endl;
-        cout << endl;
-        */
     }
 }
 
@@ -56,7 +49,6 @@ inline void addBrokenCell(int row, int column)
 {
     int location = 1 << (column - 1);
     broken[row] |= location;
-    // cout << "Broken cell updated at row " << row << " ; " << broken[row] << endl;
 }
 
 inline bool isValid(int row, int state)
@@ -93,16 +85,6 @@ inline bool checkConflicts(int row, int state, int firstRowState, int secondRowS
      * (horses cannot attack each other)
      */
     bool test = (checkFirstRowConflict(row, state, firstRowState) || checkSecondRowConflict(row, state, secondRowState));
-    /* debugging purposes
-    cout << "Curernt Row: " << row << "  ";
-    cout << "Current State: " << state << "  ";
-    cout << "First Row Conflict: " << firstRowConflictTable[state] << "  ";
-    cout << "First Row: " << firstRowState << "  ";
-    cout << "Second Row Conflict: " << secondRowConflictTable[state] << "  ";
-    cout << "Second Row: " << secondRowState << "  ";
-    cout << "Conflict?: " << test ? "True" : "False";
-    cout << endl;
-    */
     return test;
 }
 
@@ -139,9 +121,7 @@ int main()
         totalStates *= 2;
         msk = (msk << 1) + 1;
     }
-    // cout << "Mask: " << msk << endl;
     initializeConflictTables(n, msk, totalStates);
-    // cout << "Total States: " << totalStates << endl;
     for (int state = 0; state < totalStates; ++state)
     {
         if (isValid(1, state))
@@ -169,7 +149,6 @@ int main()
             }
         }
     }
-    // cout << "TST: " << result[2][2][0] << endl;
     
     int sum = 0;
     for (int i = 0; i < totalStates; ++i)
