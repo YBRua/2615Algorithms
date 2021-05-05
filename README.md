@@ -1,5 +1,11 @@
 # AI2615 Design and Analysis of Algorithms
 ## Updates
+SJTU OJ exploded so the problem id is deprecated.
+
+**May.05 Assignment 5**
+- 1162: [Largest Sum in Intervals](./Assignment5/1162_LargestSumOfInterval/largestSumOfInterval.cpp)
+- 1163: [Chess Board](./Assignment5/1163_ChessBoard/chessBoard.cpp)
+
 **Apr.29 Assignment 4**
 - 4384: [Bracket Matching DP](./Assignment4/4384_BracketMatching/bracketMatching.cpp) DP is difficult :(.
 
