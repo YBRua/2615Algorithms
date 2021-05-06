@@ -25,11 +25,6 @@ int secondRowConflicts[6] = {
     40,
     16};
 
-inline int mask(int msk, int argument)
-{
-    return msk & argument;
-}
-
 void initializeConflictTables(int n, int msk, int totalStates)
 {
     for (int state = 0; state < totalStates; ++state)
@@ -38,8 +33,8 @@ void initializeConflictTables(int n, int msk, int totalStates)
         {
             if (state & p)
             {
-                firstRowConflictTable[state] = mask(msk, firstRowConflicts[idx] | firstRowConflictTable[state]);
-                secondRowConflictTable[state] = mask(msk, secondRowConflicts[idx] | secondRowConflictTable[state]);
+                firstRowConflictTable[state] |= firstRowConflicts[idx];
+                secondRowConflictTable[state] |= secondRowConflicts[idx];
             }
         }
     }
@@ -84,8 +79,7 @@ inline bool checkConflicts(int row, int state, int firstRowState, int secondRowS
      * returns true if a conflict exist in the current state.
      * (horses cannot attack each other)
      */
-    bool test = (checkFirstRowConflict(row, state, firstRowState) || checkSecondRowConflict(row, state, secondRowState));
-    return test;
+    return (checkFirstRowConflict(row, state, firstRowState) || checkSecondRowConflict(row, state, secondRowState));
 }
 
 inline int count(int state)
@@ -143,13 +137,13 @@ int main()
                 {
                     if (checkConflicts(row, currentState, firstRowState, secondRowState))
                         continue;
-                    result[row][currentState][firstRowState] += (result[row-1][firstRowState][secondRowState]);
+                    result[row][currentState][firstRowState] += (result[row - 1][firstRowState][secondRowState]);
                     result[row][currentState][firstRowState] %= CONST;
                 }
             }
         }
     }
-    
+
     int sum = 0;
     for (int i = 0; i < totalStates; ++i)
     {
