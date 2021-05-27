@@ -1,6 +1,10 @@
 # AI2615 Design and Analysis of Algorithms
 ## Updates
 
+**May.27 Assignment 6**
+- 1202: [Bipartite Matching](./Assignment6/1202_BipartiteMatching/bipartiteMatching.cpp)
+- 1203: [Flow Pig (Max Flow)](./Assignment6/1203_FlowPig/FlowPig.cpp)
+
 **May.06 Assignment 5 Cont'd**
 > Dynamic Programming is totally difficult!
 - 1164: [Tree Pruning](./Assignment5/1164_Pruning/pruning.cpp)
