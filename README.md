@@ -1,6 +1,11 @@
 # AI2615 Design and Analysis of Algorithms
 ## Updates
 
+**May.28 Assignment 6 Cont'd**
+- 1204: [Pleasant Goat and Big Big Wolf (MinCut)](./Assignment6/1204_PleasantGoatAndBigBigWolf/wolfAndGoat.cpp)
+  - Also added a [fuzzer](./Assignment6/1204_PleasantGoatAndBigBigWolf/fuzz.py) (for debugging purposes)
+  - Source code for validation program is written by @eliphatfs
+
 **May.27 Assignment 6**
 - 1202: [Bipartite Matching](./Assignment6/1202_BipartiteMatching/bipartiteMatching.cpp)
 - 1203: [Flow Pig (Max Flow)](./Assignment6/1203_FlowPig/FlowPig.cpp)
